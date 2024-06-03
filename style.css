@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+header {
+    background-color: #7950d3;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    flex: 1;
+    padding: 1em;
+}
+ 
+.filter-section {
+    margin-bottom: 1em;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px; /* largura máxima para centralizar o contêiner */
+    margin: 0 auto;
+}
+
+.image-item {
+    flex: 0 0 30%; /* cada item ocupa 30% do contêiner, permitindo 3 por linha */
+    margin: 1.5%;
+    text-align: center;
+}
+
+.image-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #7950d3;
+    text-align: center;
+    padding: 1em 0;
+    margin-top: auto;
+}
+
+/* Estilos para diferentes filtros de daltonismo */
+.filter-image.achromatomaly {
+    filter: grayscale(100%);
+}
+
+.filter-image.deuteranomaly {
+    filter: hue-rotate(180deg);
+}
+
+.filter-image.tritanomaly {
+    filter: sepia(100%) saturate(300%) hue-rotate(-50deg);
+}
+
+.filter-image.Acromatomalia {
+    filter: grayscale(50%);
+}
+
+.filter-imagem.Deuteranopia {
+    filter: grayscale(75%) sepia(100%) hue-rotate(45deg);
+}
+
+.filter-image.Protanopia {
+    filter: sepia(35%) saturate(100%);
+}
